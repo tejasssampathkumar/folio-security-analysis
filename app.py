@@ -437,7 +437,7 @@ def plot_layout(fig: go.Figure, height: int = 420, title: str | None = None, yti
 # 3. GLOBAL MODEL PARAMETERS & LIVE PORTFOLIO COMPUTATION
 # -----------------------------------------------------------------------------
 with st.expander("GLOBAL MODEL PARAMETERS & DATA BASIS (CLICK TO ADJUST LIVE)", expanded=False):
-    g1, g2, g3, g4, g5 = st.columns([2.4, 1.4, 1.4, 1.4, 1.4])
+    g1, g2, g3, g4, g5 = st.columns([2.0, 1.3, 2.0, 1.3, 1.4])
     with g1:
         return_basis = st.selectbox(
             "Return Series Basis for Betas & Backtest",
@@ -446,20 +446,29 @@ with st.expander("GLOBAL MODEL PARAMETERS & DATA BASIS (CLICK TO ADJUST LIVE)", 
         )
     with g2:
         rf_long = st.number_input(
-            "10Y G-Sec Rf (% p.a. — DCF/CAPM)",
+            "10Y G-Sec Rf (% — DCF/CAPM)",
             min_value=4.0,
             max_value=10.0,
             value=round(wb_model["assumptions"]["rf"] * 100, 3),
             step=0.05,
         ) / 100.0
     with g3:
-        rf_short = st.number_input(
-            "91D T-Bill Rf (% p.a. — Portfolio)",
-            min_value=3.0,
-            max_value=9.5,
-            value=6.80,
-            step=0.05,
-        ) / 100.0
+        rf_port_mode = st.selectbox(
+            "Portfolio Risk-Free Benchmark",
+            options=[
+                "91-Day RBI T-Bill (6.80% p.a. — Zero Duration)",
+                "10-Year India G-Sec (7.47% p.a. — Long-Horizon)",
+                "Custom Portfolio Rate",
+            ],
+            index=0,
+            help="Choose 91-Day T-Bill for cash/rebalancing or 10-Year G-Sec for long-run buy-and-hold compounding.",
+        )
+        if "91-Day" in rf_port_mode:
+            rf_short = 0.0680
+        elif "10-Year" in rf_port_mode:
+            rf_short = rf_long
+        else:
+            rf_short = st.number_input("Custom Rf (% p.a.)", min_value=3.0, max_value=12.0, value=6.80, step=0.05) / 100.0
     with g4:
         erp_in = st.number_input(
             "India Equity Risk Premium (%)",
