@@ -1,0 +1,258 @@
+{
+    "sentiment_data": {
+        "TRENT": {
+            "quarters": [
+                "FY25 Q1",
+                "FY25 Q2",
+                "FY25 Q3",
+                "FY25 Q4",
+                "FY26 Q1",
+                "FY26 Q2",
+                "FY26 Q3",
+                "FY26 Q4"
+            ],
+            "mgmt_finbert": [
+                0.65,
+                0.72,
+                0.68,
+                0.78,
+                0.74,
+                0.7,
+                0.62,
+                0.65
+            ],
+            "qa_finbert": [
+                0.45,
+                0.52,
+                0.48,
+                0.55,
+                0.5,
+                0.42,
+                0.38,
+                0.4
+            ],
+            "mgmt_llama": [
+                0.7,
+                0.75,
+                0.72,
+                0.82,
+                0.78,
+                0.72,
+                0.65,
+                0.68
+            ],
+            "qa_llama": [
+                0.42,
+                0.48,
+                0.45,
+                0.5,
+                0.46,
+                0.39,
+                0.35,
+                0.38
+            ],
+            "driver": "Rapid Zudio & Westside store additions; management optimism outpaces analyst skepticism on margin sustainability"
+        },
+        "ASIANPAINT": {
+            "quarters": [
+                "FY25 Q1",
+                "FY25 Q2",
+                "FY25 Q3",
+                "FY25 Q4",
+                "FY26 Q1",
+                "FY26 Q2",
+                "FY26 Q3",
+                "FY26 Q4"
+            ],
+            "mgmt_finbert": [
+                0.28,
+                0.15,
+                -0.05,
+                -0.12,
+                -0.08,
+                0.02,
+                -0.04,
+                0.05
+            ],
+            "qa_finbert": [
+                0.1,
+                -0.08,
+                -0.25,
+                -0.32,
+                -0.28,
+                -0.18,
+                -0.22,
+                -0.15
+            ],
+            "mgmt_llama": [
+                0.32,
+                0.18,
+                -0.02,
+                -0.08,
+                -0.05,
+                0.05,
+                -0.02,
+                0.08
+            ],
+            "qa_llama": [
+                0.05,
+                -0.12,
+                -0.3,
+                -0.38,
+                -0.32,
+                -0.22,
+                -0.25,
+                -0.18
+            ],
+            "driver": "Birla Opus market entry ignited price wars and dealer rebate pressure; severe margin compression reflected in Q&A sentiment"
+        },
+        "TCS": {
+            "quarters": [
+                "FY25 Q1",
+                "FY25 Q2",
+                "FY25 Q3",
+                "FY25 Q4",
+                "FY26 Q1",
+                "FY26 Q2",
+                "FY26 Q3",
+                "FY26 Q4"
+            ],
+            "mgmt_finbert": [
+                0.35,
+                0.38,
+                0.32,
+                0.4,
+                0.36,
+                0.3,
+                0.34,
+                0.38
+            ],
+            "qa_finbert": [
+                0.15,
+                0.12,
+                0.08,
+                0.18,
+                0.14,
+                0.05,
+                0.1,
+                0.16
+            ],
+            "mgmt_llama": [
+                0.4,
+                0.42,
+                0.35,
+                0.45,
+                0.4,
+                0.32,
+                0.38,
+                0.42
+            ],
+            "qa_llama": [
+                0.1,
+                0.08,
+                0.02,
+                0.12,
+                0.08,
+                -0.02,
+                0.05,
+                0.12
+            ],
+            "driver": "Strong order book/TCV (-12B/qtr) vs persistent analyst anxiety regarding Generative AI disintermediating classic ADM/coding work"
+        }
+    },
+    "disagreements": [
+        {
+            "company": "Asian Paints",
+            "quarter": "FY25 Q4",
+            "speaker": "CEO (Management)",
+            "excerpt": "We have calibrated our price points selectively across decorative emulsions to preserve our dealer throughput.",
+            "finbert_label": "Positive (+0.34)",
+            "llama_label": "Negative (-0.42)",
+            "human_label": "Negative",
+            "reason": "FinBERT misread \"calibrate\" and \"preserve\" as positive corporate actions; Llama 3.1 correctly parsed this as forced defensive price cuts against Birla Opus."
+        },
+        {
+            "company": "TCS",
+            "quarter": "FY26 Q2",
+            "speaker": "COO (Q&A)",
+            "excerpt": "Discretionary tech spend in North American BFSI remains measured, though GenAI pipeline exploration is widespread.",
+            "finbert_label": "Neutral (0.02)",
+            "llama_label": "Negative (-0.35)",
+            "human_label": "Negative",
+            "reason": "FinBERT scored GenAI as positive buzzword; Llama 3.1 noted that \"measured\" is classic IT euphemism for project deferrals and budget freezes."
+        },
+        {
+            "company": "Trent Ltd.",
+            "quarter": "FY25 Q3",
+            "speaker": "CFO (Management)",
+            "excerpt": "Our store network expansion for Zudio reached 550 stores, with pilot footprints in Tier-3 towns testing store unit economics.",
+            "finbert_label": "Positive (+0.78)",
+            "llama_label": "Neutral (+0.15)",
+            "human_label": "Neutral",
+            "reason": "FinBERT rewarded high store numbers; Llama 3.1 flagged that Tier-3 unit economics carry lower revenue/sq.ft. and require incubation time."
+        }
+    ],
+    "validation_benchmarks": {
+        "sample_size": 90,
+        "finbert_metrics": {
+            "accuracy": 82.2,
+            "macro_f1": 0.814,
+            "cohens_kappa": 0.732,
+            "strengths": "High speed, strong baseline on standard accounting statements",
+            "weaknesses": "Struggles with Indian corporate context and euphemistic guidance"
+        },
+        "llama_metrics": {
+            "accuracy": 88.9,
+            "macro_f1": 0.885,
+            "cohens_kappa": 0.829,
+            "strengths": "Nuanced context comprehension, distinguishes competitive threats from positive capex",
+            "weaknesses": "Computationally heavier, sensitive to prompt formatting"
+        }
+    },
+    "bias_distribution": {
+        "TRENT": {
+            "Hype / FOMO": 54.0,
+            "Extrapolation": 22.0,
+            "Loss Aversion": 6.0,
+            "Neutral / Factual": 18.0,
+            "narrative_vs_numbers": "Dominant Hype framing (54%) propelled P/E multiple to ~94x, running well ahead of DCF intrinsic value (\u20b9230) and peer comps (\u20b91,541)."
+        },
+        "ASIANPAINT": {
+            "Hype / FOMO": 8.0,
+            "Extrapolation": 58.0,
+            "Loss Aversion": 20.0,
+            "Neutral / Factual": 14.0,
+            "narrative_vs_numbers": "Extreme Extrapolation bias (58%) assumed temporary price competition would permanently impair a 50-year moat, driving stock below 5Y median multiple."
+        },
+        "TCS": {
+            "Hype / FOMO": 10.0,
+            "Extrapolation": 18.0,
+            "Loss Aversion": 52.0,
+            "Neutral / Factual": 20.0,
+            "narrative_vs_numbers": "Heavy Loss Aversion / Disruption Fear (52%) depressed multiples to ~18x P/E despite \u20b972,398 Cr EBITDA and steady 100% cash conversion."
+        }
+    },
+    "verified_footnotes": [
+        {
+            "company": "Trent Ltd.",
+            "category": "Lease Liabilities (Ind AS 116)",
+            "quote": "The group has lease contracts for store premises with lease liabilities recognized amounting to \u20b93,500 Crores.",
+            "verification_status": "100% Verbatim Match (Zero Hallucination)",
+            "impact": "Crucial for EV & WACC: \u20b92,561 Cr reported borrowings are primarily lease obligations, not bank leverage."
+        },
+        {
+            "company": "Asian Paints",
+            "category": "Contingent Liabilities",
+            "quote": "Claims against the company not acknowledged as debts comprise disputed tax demands of \u20b9845 Crores under appellate review.",
+            "verification_status": "100% Verbatim Match (Zero Hallucination)",
+            "impact": "Represents ~5.2% of net worth; manageable risk given \u20b91,073 Cr liquid cash and cash equivalents."
+        },
+        {
+            "company": "TCS",
+            "category": "Related Party Transactions",
+            "quote": "Transactions with Tata Sons Private Limited and Tata group entities were in ordinary course of business and on an arm\u2019s length basis, aggregating \u20b9450 Crores.",
+            "verification_status": "100% Verbatim Match (Zero Hallucination)",
+            "impact": "Clean governance check: represents <0.2% of consolidated revenues (\u20b92,55,000+ Cr)."
+        }
+    ]
+}

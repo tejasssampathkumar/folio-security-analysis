@@ -1,0 +1,154 @@
+{
+    "weights": {
+        "TRENT": 11.11,
+        "ASIANPAINT": 49.54,
+        "TCS": 39.36
+    },
+    "tangency_return_pct": 15.62,
+    "tangency_vol_pct": 21.21,
+    "tangency_sharpe": 0.42,
+    "archetypes": {
+        "Aggressive (Priya, Age 27)": {
+            "sub_a": 17,
+            "sub_b": 19,
+            "raw_r": 36,
+            "r_used": 36,
+            "prudence_triggered": false,
+            "A": 2.2,
+            "basket": "Aggressive",
+            "equity_share_pct": 89.1,
+            "tbill_share_pct": 10.9,
+            "asset_alloc_pct": {
+                "TRENT": 9.89,
+                "ASIANPAINT": 44.12,
+                "TCS": 35.06,
+                "91D_TBILL": 10.92
+            },
+            "expected_return_pct": 14.66,
+            "expected_vol_pct": 18.9
+        },
+        "Balanced (Rahul, Age 41)": {
+            "sub_a": 13,
+            "sub_b": 14,
+            "raw_r": 27,
+            "r_used": 27,
+            "prudence_triggered": false,
+            "A": 4.9,
+            "basket": "Balanced",
+            "equity_share_pct": 40.0,
+            "tbill_share_pct": 60.0,
+            "asset_alloc_pct": {
+                "TRENT": 4.44,
+                "ASIANPAINT": 19.81,
+                "TCS": 15.74,
+                "91D_TBILL": 60.01
+            },
+            "expected_return_pct": 10.33,
+            "expected_vol_pct": 8.48
+        },
+        "Defensive (Meena, Age 58)": {
+            "sub_a": 8,
+            "sub_b": 7,
+            "raw_r": 15,
+            "r_used": 15,
+            "prudence_triggered": false,
+            "A": 8.5,
+            "basket": "Defensive",
+            "equity_share_pct": 23.1,
+            "tbill_share_pct": 76.9,
+            "asset_alloc_pct": {
+                "TRENT": 2.56,
+                "ASIANPAINT": 11.42,
+                "TCS": 9.07,
+                "91D_TBILL": 76.95
+            },
+            "expected_return_pct": 8.83,
+            "expected_vol_pct": 4.89
+        },
+        "Prudence Case (Arjun, 30)": {
+            "sub_a": 7,
+            "sub_b": 16,
+            "raw_r": 23,
+            "r_used": 14,
+            "prudence_triggered": true,
+            "A": 8.8,
+            "basket": "Defensive",
+            "equity_share_pct": 22.3,
+            "tbill_share_pct": 77.7,
+            "asset_alloc_pct": {
+                "TRENT": 2.47,
+                "ASIANPAINT": 11.03,
+                "TCS": 8.76,
+                "91D_TBILL": 77.73
+            },
+            "expected_return_pct": 8.76,
+            "expected_vol_pct": 4.72
+        }
+    },
+    "metrics_table": {
+        "Annual Return (%)": {
+            "TRENT": 31.92,
+            "ASIANPAINT": -1.64,
+            "TCS": 0.83,
+            "Equal-Weight (3 Stocks)": 10.37,
+            "Optimal Tangency Portfolio": 3.06,
+            "Nifty 50 Benchmark": 6.22
+        },
+        "Annual Volatility (%)": {
+            "TRENT": 43.14,
+            "ASIANPAINT": 25.71,
+            "TCS": 28.45,
+            "Equal-Weight (3 Stocks)": 24.39,
+            "Optimal Tangency Portfolio": 21.21,
+            "Nifty 50 Benchmark": 13.43
+        },
+        "Beta vs Nifty": {
+            "TRENT": 1.83,
+            "ASIANPAINT": 1.14,
+            "TCS": 1.15,
+            "Equal-Weight (3 Stocks)": 1.38,
+            "Optimal Tangency Portfolio": 1.22,
+            "Nifty 50 Benchmark": 1.0
+        },
+        "Sharpe Ratio": {
+            "TRENT": 0.57,
+            "ASIANPAINT": -0.35,
+            "TCS": -0.23,
+            "Equal-Weight (3 Stocks)": 0.12,
+            "Optimal Tangency Portfolio": -0.21,
+            "Nifty 50 Benchmark": -0.09
+        },
+        "Treynor Ratio (%)": {
+            "TRENT": 13.33,
+            "ASIANPAINT": -7.96,
+            "TCS": -5.76,
+            "Equal-Weight (3 Stocks)": 2.1,
+            "Optimal Tangency Portfolio": -3.6,
+            "Nifty 50 Benchmark": -1.25
+        },
+        "Jensen Alpha (%)": {
+            "TRENT": 26.75,
+            "ASIANPAINT": -7.68,
+            "TCS": -5.2,
+            "Equal-Weight (3 Stocks)": 4.63,
+            "Optimal Tangency Portfolio": -2.88,
+            "Nifty 50 Benchmark": 0.0
+        },
+        "Tracking Error (%)": {
+            "TRENT": 37.14,
+            "ASIANPAINT": 20.7,
+            "TCS": 23.96,
+            "Equal-Weight (3 Stocks)": 16.69,
+            "Optimal Tangency Portfolio": 13.74,
+            "Nifty 50 Benchmark": 0.0
+        },
+        "Information Ratio": {
+            "TRENT": 0.69,
+            "ASIANPAINT": -0.38,
+            "TCS": -0.22,
+            "Equal-Weight (3 Stocks)": 0.25,
+            "Optimal Tangency Portfolio": -0.23,
+            "Nifty 50 Benchmark": 0.0
+        }
+    }
+}

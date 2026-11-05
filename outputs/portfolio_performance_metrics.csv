@@ -1,0 +1,7 @@
+,Annual Return (%),Annual Volatility (%),Beta vs Nifty,Sharpe Ratio,Treynor Ratio (%),Jensen Alpha (%),Tracking Error (%),Information Ratio
+TRENT,31.92,43.14,1.83,0.57,13.33,26.75,37.14,0.69
+ASIANPAINT,-1.64,25.71,1.14,-0.35,-7.96,-7.68,20.7,-0.38
+TCS,0.83,28.45,1.15,-0.23,-5.76,-5.2,23.96,-0.22
+Equal-Weight (3 Stocks),10.37,24.39,1.38,0.12,2.1,4.63,16.69,0.25
+Optimal Tangency Portfolio,3.06,21.21,1.22,-0.21,-3.6,-2.88,13.74,-0.23
+Nifty 50 Benchmark,6.22,13.43,1.0,-0.09,-1.25,0.0,0.0,0.0

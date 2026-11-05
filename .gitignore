@@ -1,0 +1,17 @@
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Redundant temporary / backup copies (keep SA_final_workbook.xlsx and SA_final_workbook_master.xlsx)
+SA_final_workbook_backup.xlsx
+*.textClipping
+Security Analysis Project Master To-Do copy.docx
