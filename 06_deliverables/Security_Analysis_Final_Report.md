@@ -1,163 +1,199 @@
-# Narrative vs. Numbers: An AI-Augmented Security Analysis of Trent, Asian Paints and TCS, with a Lifecycle Portfolio Built on Utility-Based Allocation
+# SECURITY ANALYSIS PROJECT REPORT
 
-**Course:** Security Analysis & Portfolio Management (SAPM) | **Faculty:** Prof. Jagriti  
-**Valuation Cutoff Date:** November 3, 2026 | **Risk-Free Benchmarks:** 91-Day RBI T-Bill (6.80% p.a.) & 10-Year Benchmark G-Sec (7.473% p.a.) | **India ERP:** 7.08%  
-**Interactive Terminal:** **Folio (`F.`)** Dynamic Streamlit & Ollama LLM Terminal (`http://localhost:8502`)
+## Narrative vs. Numbers: Security Analysis of Trent, Asian Paints and TCS
 
----
+**SUBJECT:** Security Analysis  
+**GROUP:** Group 10  
+**SUBMITTED TO:** Prof. Jagriti Bhattacharyya  
 
-## PAGE 1: COMPANY SELECTION, CENTRAL THESIS & DIVERSIFICATION RATIONALE
-
-### 1.1 Central Research Question & Core Thesis
-Where does market sentiment diverge from fundamental valuation in Indian listed equities, and can that divergence be empirically measured, validated with natural language processing (NLP), and used to construct a utility-optimizing lifecycle portfolio?
-
-We examine three distinct market archetypes:
-1. **Trent Ltd. (Hype / Momentum Case):** A premium earnings multiple (P/E 94.1x, EV/EBITDA 43.8x) priced for flawless store rollout (Zudio/Westside) and continuous operating leverage, running substantially ahead of discounted cash flow fundamentals.
-2. **Asian Paints Ltd. (De-Rating Case):** A 50-year market leader experiencing aggressive multiple contraction (P/E de-rated from 5Y median of 61.2x to 54.1x; peer comps at 31.1x) following the aggressive market entry and price-war discounting of Grasim's Birla Opus.
-3. **Tata Consultancy Services Ltd. (Fear vs. Fundamentals Case):** P/E depressed to 18.4x by pervasive investor anxiety over Generative AI disrupting IT maintenance and coding work, despite exceptional cash generation (Rs 72,398 Cr EBITDA, 1.01x 5Y CFO/PAT conversion, and >45% ROCE).
-
-Together, these archetypes represent sentiment running **ahead of**, **behind**, and **in conflict with** corporate fundamentals.
-
-### 1.2 Company Snapshot & Structural Roles
-| Metric / Parameter | Trent Ltd. (`TRENT.NS`) | Asian Paints Ltd. (`ASIANPAINT.NS`) | Tata Consultancy Services (`TCS.NS`) |
-| :--- | :--- | :--- | :--- |
-| **Primary Industry** | Apparel & Fast Fashion Retail | Decorative Paints & Coatings | Enterprise IT Services & Cloud |
-| **Market Capitalization** | Rs 1,61,880 Cr | Rs 2,33,853 Cr | Rs 9,04,163 Cr |
-| **Current Market Price (CMP)** | Rs 3,036.00 | Rs 2,438.00 | Rs 2,499.00 |
-| **5-Year Beta vs. Nifty 50** | **1.83** (Raw) / **1.56** (Blume) | **1.14** (Raw) / **1.10** (Blume) | **1.15** (Raw) / **1.10** (Blume) |
-| **Annualized Volatility (5Y)** | **43.14%** (High Volatility) | **25.71%** (Moderate) | **28.45%** (Moderate) |
-| **Role in Portfolio** | High-beta capital appreciation engine | Low-correlation defensive quality anchor | Low-capex, high-cash dividend yield ballast |
-
-### 1.3 Alternatives Considered and Formally Rejected
-* **ITC Ltd.:** Rejected due to conglomerate tax distortion (tobacco excise duties), ongoing hotel de-merger complexities, and ESG institutional discounts, which confound pure sentiment modeling.
-* **Hindustan Unilever (HUL) & Nestle India:** Rejected due to excessive demand overlap with Asian Paints and Trent in urban middle-class consumer staples.
-* **Cummins India & L&T:** Rejected because capital goods cycles are heavily dependent on government capex announcements rather than retail consumer sentiment or technological disruption narratives.
-* **Coal India:** Rejected due to dominant sovereign ownership and regulated pricing, which mutes market sentiment transmission.
-
-### 1.4 Empirical Sector Diversification Proof (5-Year Monthly Correlation Matrix)
-Rather than assuming diversification, we compute the 60-month return correlation matrix (Oct 2021 – Oct 2026) from `SA_final_workbook.xlsx`:
-$$\begin{pmatrix} & \text{TRENT} & \text{ASIANPAINT} & \text{TCS} & \text{NIFTY 50} \\ \text{TRENT} & 1.000 & 0.403 & 0.350 & 0.571 \\ \text{ASIANPAINT} & 0.403 & 1.000 & 0.185 & 0.598 \\ \text{TCS} & 0.350 & 0.185 & 1.000 & 0.544 \\ \text{NIFTY 50} & 0.571 & 0.598 & 0.544 & 1.000 \end{pmatrix}$$
-*Cross-asset correlations between Asian Paints and TCS are exceptionally low ($0.185$), while Trent-TCS is $0.350$. This mathematically guarantees portfolio variance reduction when blended.*
+**Group Members:**
+- Tejas Sampathkumar — 246213022
+- Renee Gupta — 246213682
+- Faizan Ali Siddiqui — 246213110
+- Sure Manikanta — 246213296
+- Ojasvi Paliwal — 246213434
 
 ---
 
-## PAGE 2: TRADITIONAL VALUATION & EARNINGS QUALITY REVIEW
-
-### 2.1 Five-Year Historical Financial Performance (FY22 – FY26)
-* **Trent Ltd.:** Revenue grew from Rs 4,498.02 Cr (FY22) to Rs 20,074.21 Cr (FY26) at a 45.3% CAGR. EBITDA margin expanded from 12.76% to 18.73%, driven by private-label gross margins and operating leverage in Zudio. 5-year cumulative CFO/PAT conversion stands at 1.19x.
-* **Asian Paints:** Revenue grew from Rs 29,101.28 Cr (FY22) to Rs 35,583.54 Cr (FY26) at a 5.2% CAGR. EBITDA margins ranged between 16.5% and 21.2% amidst raw material volatility (titanium dioxide/crude derivatives) and dealer discounting to defend market share against Grasim Birla Opus. 5-year cumulative CFO/PAT conversion is 1.11x.
-* **TCS:** Revenue expanded from Rs 1,91,754 Cr (FY22) to Rs 2,67,021 Cr (FY26) at a 8.6% CAGR with industry-leading EBITDA margins maintained at 26.5%–27.7% (Rs 72,398 Cr FY26 EBITDA). Free cash flow conversion remained resilient with 5-year cumulative CFO/PAT at 1.01x, requiring minimal capex reinvestment to sustain organic growth.
-
-### 2.2 Two-Stage FCFF Discounted Cash Flow (DCF) Valuation Model
-Parameters anchored to sovereign benchmarks in `SA_final_workbook.xlsx`: Risk-Free Rate $R_f = 7.473\%$ (10Y G-Sec), Equity Risk Premium $ERP = 7.08\%$, Statutory Corporate Tax Rate $t = 25.17\%$, Blume Beta adjustment weight $0.67$, and Terminal Growth Rate $g = 5.00\%$ (anchored below long-run nominal Indian GDP growth).
-
-| Valuation Parameter | Trent Ltd. (10Y Stage 1) | Asian Paints Ltd. (5Y Stage 1) | Tata Consultancy Services (5Y Stage 1) |
-| :--- | :---: | :---: | :---: |
-| **Blume-Adjusted Beta ($\beta$)** | 1.5592 | 1.0966 | 1.1026 |
-| **Cost of Equity ($K_e$)** | 18.51% | 15.24% | 15.28% |
-| **Pre-Tax Cost of Debt ($K_d$)** | 9.70% (Lease-dominated) | 6.28% | 11.87% (Lease interest) |
-| **After-Tax Cost of Debt ($K_d(1-t)$)** | 7.26% | 4.70% | 8.88% |
-| **Equity Weight ($E/V$)** | 98.44% | 98.35% | 98.77% |
-| **Weighted Average Cost of Capital (WACC)** | **18.34%** | **15.06%** | **15.20%** |
-| **Stage 1 (PV of Explicit FCFF)** | Rs 6,176.54 Cr (10Y) | Rs 12,710.27 Cr (5Y) | Rs 1,71,732.69 Cr (5Y) |
-| **Stage 2 (PV of Terminal Value)** | Rs 6,958.10 Cr (52.98% of EV) | Rs 25,200.01 Cr (66.47% of EV) | Rs 3,25,281.01 Cr (65.45% of EV) |
-| **Enterprise Value (EV)** | Rs 13,134.63 Cr | Rs 37,910.29 Cr | Rs 4,97,013.70 Cr |
-| **Less: Total Borrowings & Leases** | Rs (2,561.25) Cr | Rs (3,928.93) Cr | Rs (11,283.00) Cr |
-| **Plus: Cash & Marketable Investments** | Rs 1,667.91 Cr | Rs 8,135.42 Cr | Rs 46,896.00 Cr |
-| **Implied Equity Value** | Rs 12,241.29 Cr | Rs 42,116.78 Cr | Rs 5,32,626.70 Cr |
-| **Diluted Shares Outstanding** | 53.32 Cr | 95.92 Cr | 361.81 Cr |
-| **DCF Intrinsic Value per Share** | **Rs 229.58** | **Rs 439.08** | **Rs 1,472.12** |
-| **Current Market Price (CMP)** | **Rs 3,036.00** | **Rs 2,438.00** | **Rs 2,499.00** |
-| **DCF Margin of Safety / Upside** | **-1,222.4% / -92.4% (Overvalued)** | **-455.2% / -82.0% (Overvalued)** | **-69.8% / -41.1% (Overvalued)** |
-
-### 2.3 WACC $\times$ Terminal Growth ($g$) Sensitivity Matrices (Intrinsic Value in Rs)
-* **Trent Ltd. (Base: Rs 229.58 at $WACC=18.34\%, g=5.0\%$):** Ranges from **Rs 195.86** ($WACC=19.34\%, g=4.0\%$) to **Rs 274.84** ($WACC=17.34\%, g=6.0\%$). Market price of Rs 3,036 requires sustaining >30% revenue growth well beyond a decade.
-* **Asian Paints (Base: Rs 439.08 at $WACC=15.06\%, g=5.0\%$):** Ranges from **Rs 380.89** ($WACC=16.06\%, g=4.0\%$) to **Rs 525.64** ($WACC=14.06\%, g=6.0\%$).
-* **TCS (Base: Rs 1,472.12 at $WACC=15.20\%, g=5.0\%$):** Ranges from **Rs 1,274.18** ($WACC=16.20\%, g=4.0\%$) to **Rs 1,764.73** ($WACC=14.20\%, g=6.0\%$).
-
-### 2.4 Relative Valuation & Football-Field Synthesis (50/50 Blend of P/E & EV/EBITDA)
-* **Trent Ltd.:** Peer-implied value is **Rs 1,540.75** (Peer median P/E 40.6x, EV/EBITDA 25.9x; `-97.0%` MoS); Own 5Y history implied value is **Rs 4,132.13** (5Y median P/E 109.9x, EV/EBITDA 67.8x; `+26.5%` MoS).
-* **Asian Paints:** Peer-implied value is **Rs 1,375.48** (Peer median P/E 31.1x, EV/EBITDA 19.7x; `-77.2%` MoS); Own 5Y history implied value is **Rs 2,679.70** (5Y median P/E 61.2x, EV/EBITDA 37.6x; `+9.0%` MoS).
-* **TCS:** Peer-implied value is **Rs 2,467.90** (Peer median P/E 18.3x, EV/EBITDA 12.2x; `-1.3%` MoS); Own 5Y history implied value is **Rs 3,869.93** (5Y median P/E 27.8x, EV/EBITDA 19.7x; `+35.4%` MoS). *TCS trades at exact parity with Indian IT peers.*
-
-### 2.5 Earnings Quality, Footnote Review & Ind AS 116 Lease Liabilities
-* **Earnings Quality Check (`earnings_quality` sheet):** 5-year cumulative CFO/PAT is **1.19x for Trent**, **1.11x for Asian Paints**, and **1.01x for TCS** (15/15 company-years pass `CFO/PAT > 0.80`), confirming that reported profits are backed by hard operating cash flow. Note: Beneish M-Score and DuPont decomposition are excluded by scope design.
-* **Footnote & Data Hygiene Audit:** Trent's reported borrowings of Rs 2,561.25 Cr represent capitalized Ind AS 116 store lease liabilities across its Zudio/Westside network rather than bank debt. In the daily OHLCV market feed (`daily_market_data.csv`), an unadjusted 3:2 share split discontinuity on `2026-01-01` in `TRENT.NS` was detected and adjusted in `folio_core.py` so volatility and technical overlays remain distortion-free.
+## Summary
+In this project we looked at three Indian stocks, Trent, Asian Paints and TCS, in three ways. First the usual financial valuation work: ratios, DCF models, peer comparisons and cash flow checks. Second, we ran earnings call transcripts through AI models to see what the market is saying versus what the numbers show. Third, we built a portfolio using a utility-based allocation model and put it in a Streamlit dashboard so we could play around with different investment scenarios.
 
 ---
 
-## PAGE 3: AI-AUGMENTED ANALYSIS, FOLIO (`F.`) TERMINAL & LIVE OLLAMA STRATEGIST
+## What we wanted to find out
+Our main question was simple: where does market sentiment drift away from what a stock is actually worth in India, can we measure that gap using NLP, and can we use it to build a better portfolio?
 
-### 3.1 Dual-Model Concall NLP Pipeline (FinBERT vs. Local Ollama Llama 3.1 8B)
-We pre-processed 24 earnings call transcripts across 8 quarters (FY25 Q1 to FY26 Q4), segmenting text into **Management Remarks** and **Analyst Q&A**, chunked into $\le 450$-token windows. Scoring applied ProsusAI FinBERT and local quantized Llama 3.1 8B (`llama3.1:latest` via Ollama).
-
-```
-Sentiment Trend Findings (Score scale: -1.0 to +1.0):
-- Trent: Prepared Remarks (+0.70) outpaced Analyst Q&A (+0.44). The "Management Optimism Gap" widened in FY26 as analysts probed same-store-sales-growth (SSSG) moderation.
-- Asian Paints: Sentiment plummeted from +0.28 (FY25 Q1) to -0.32 in Analyst Q&A by FY26 Q1 as Grasim Birla Opus rolled out dealer rebates.
-- TCS: Stable sentiment spread (+0.38 Remarks vs +0.10 Q&A). Strong TCV announcements offset analyst queries regarding Generative AI billing rate pressures.
-```
-
-### 3.2 Human Gold-Standard Validation (90-Sentence Benchmark)
-To verify AI outputs rigorously rather than trusting black-box scores, 30 concall sentences per company were blind-labeled by the group:
-* **FinBERT:** Accuracy = **82.2%**, Macro-F1 = **0.814**, Cohen's Kappa $\kappa = \mathbf{0.732}$.
-* **Local Llama 3.1 8B:** Accuracy = **88.9%**, Macro-F1 = **0.885**, Cohen's Kappa $\kappa = \mathbf{0.829}$.
-* **Disagreement Insight:** FinBERT misclassified Indian management euphemisms (e.g. "selective price calibration" was scored as positive corporate action by FinBERT [+0.34], whereas Llama 3.1 correctly identified defensive price cuts [-0.42], matching the human gold standard).
-
-### 3.3 Behavioral Bias & Media Framing Classification (150 Financial News Headlines)
-We classified 50 recent headlines per company into 4 behavioral framing categories:
-1. **Trent Ltd. — Hype / FOMO Framing (54.0%):** Media narratives focused overwhelmingly on store count milestones and "next multi-bagger" labels, propelling market valuation to 94.1x P/E, completely detached from DCF intrinsic value.
-2. **Asian Paints Ltd. — Extrapolation Bias (58.0%):** Headlines linearly extrapolated short-term pricing pressure to imply permanent disruption of a 50-year distribution network, depressing sentiment below historical franchise value.
-3. **TCS — Loss Aversion / Disruption Fear (52.0%):** Media coverage fixated on GenAI replacement risks, overlooking continuous deal ramp-ups and 1.01x cash conversion.
-
-### 3.4 Folio (`F.`) Dynamic Terminal & Live Ollama AI Strategist
-Rather than presenting static charts, we engineered **Folio (`F.`)** (`app.py`, `folio_core.py`, `folio_ai.py`) — a TradingView SPX-inspired interactive Streamlit terminal styled in Trade Gothic typography, bright off-white (`#F7F8FA`), institutional blue (`#2563EB`), and crimson red (`#DC2626`) with zero emojis:
-* **Interactive Simulation:** Users dynamically stress-test DCF WACC/growth sliders, toggle 60M vs. Daily split-adjusted covariance matrices, answer the 10-question risk profiler, and run 1,000-path GBM price fans and 2,000-path Monte Carlo SIP simulations.
-* **Live Ollama Co-Pilot (`05 / FOLIO AI STRATEGIST`):** Connected to local `llama3.1:latest` (`localhost:11434`), injecting real-time dashboard metrics (live DCF IV, portfolio weights, Sharpe/Treynor/Alpha/IR, and risk score $A$) into the system prompt for grounded institutional interrogation and live sentence/headline framing classification.
+We picked three companies that each show a different kind of gap:
+- **Trent (hype and momentum):** The stock trades at a P/E of 94.1x and EV/EBITDA of 43.8x. The market is basically pricing in perfect growth for Zudio and Westside, and that is far ahead of what the discounted cash flows support.
+- **Asian Paints (de-rating):** It has been the market leader for years, but its P/E has slipped from a 5-year median of 61.2x to 54.1x, while sector peers sit at 31.1x. The reason is tough price competition from Grasim's Birla Opus.
+- **TCS (fear vs. fundamentals):** Its P/E is down at 18.4x because investors worry Generative AI will hurt traditional IT services. But the company makes a lot of cash: ₹72,398 Cr EBITDA, a CFO/PAT of 1.01x and ROCE above 45%.
 
 ---
 
-## PAGE 4: PORTFOLIO ALLOCATION, LIFECYCLE SIP & FINAL VERDICTS
+## The three companies and their role in the portfolio
+- **Trent Ltd. (TRENT.NS):** Fast fashion and apparel retailer. Market cap is ₹1,61,880 Cr and the price is ₹3,036. Its 5-year beta against the Nifty 50 is 1.83 (raw) or 1.56 (Blume-adjusted), and annualized volatility is 43.14%, which is high. We treat it as the high-beta growth driver.
+- **Asian Paints Ltd. (ASIANPAINT.NS):** Makes decorative paints and coatings. Market cap is ₹2,33,853 Cr and the price is ₹2,438. Beta is 1.14 raw or 1.10 Blume, and volatility is 25.71%, which is moderate. We treat it as a low-correlation defensive anchor.
+- **Tata Consultancy Services (TCS.NS):** Enterprise IT and cloud services. Market cap is ₹9,04,163 Cr and the price is ₹2,499. Beta is 1.15 raw or 1.10 Blume, and volatility is 28.45%, also moderate. We treat it as a cash-generating dividend anchor.
 
-### 4.1 Optimal Risky Portfolio (Mean-Variance Optimization via Forward-Looking Returns)
-Using forward-looking CAPM expected returns ($E(R_{\text{Trent}})=18.51\%, E(R_{\text{AP}})=15.24\%, E(R_{\text{TCS}})=15.28\%$), MVO with a 70% single-asset ceiling yields the **Optimal Tangency Portfolio**:
-* **Trent Ltd.: 11.1%** (Constrained by high 43.14% annualized volatility)
-* **Asian Paints Ltd.: 49.5%** (High weight due to low correlation with TCS [$0.185$] and quality stability)
-* **Tata Consultancy Services: 39.4%** (High weight due to defensive cash flow and moderate volatility)
-* **Forward Tangency Performance (vs. 91D T-Bill 6.80%):** Expected Return = **15.62%** | Expected Volatility = **21.21%** | Forward Sharpe Ratio = **+0.42**
+---
 
-### 4.2 Investor Risk Profiling & Utility Allocation Formula
-Scored via the 10-Question Questionnaire ($R \in [10, 40]$) with the **Prudence Rule** ($|\text{Sec A} - \text{Sec B}| \ge 6 \implies R_{\text{used}} = 2 \times \min(\text{Sec A}, \text{Sec B})$):
-$$A = 10 - 0.3 \times (R_{\text{used}} - 10), \quad y^* = \min\left(1.0, \frac{E(R_p) - R_{f,\text{tbill}}}{A \cdot \sigma_p^2}\right)$$
+## Who we left out and why
+- **ITC:** Tobacco tax distortions, the hotel de-merger and ESG filters would mess up the sentiment tracking.
+- **HUL and Nestle India:** Their customer base overlaps too much with Asian Paints and Trent.
+- **Cummins India and L&T:** Capital goods depend a lot on government spending cycles, not consumer trends or tech shifts.
+- **Coal India:** State ownership and regulated pricing block out natural sentiment signals.
 
-| Investor Basket | Score Range ($R$) | Representative $R \rightarrow A$ | Equity Share ($y^*$) | 91D T-Bill Share | Detailed Asset Allocation |
-| :--- | :---: | :---: | :---: | :---: | :--- |
-| **Aggressive Basket** | 32 to 40 | $R=36 \rightarrow A=2.2$ | **89.1%** | 10.9% | Trent 9.9%, Asian Paints 44.1%, TCS 35.1%, T-Bills 10.9% |
-| **Balanced Basket** | 22 to 31 | $R=27 \rightarrow A=4.9$ | **40.0%** | 60.0% | Trent 4.4%, Asian Paints 19.8%, TCS 15.7%, T-Bills 60.0% |
-| **Defensive Basket** | 10 to 21 | $R=15 \rightarrow A=8.5$ | **23.1%** | 76.9% | Trent 2.6%, Asian Paints 11.4%, TCS 9.1%, T-Bills 76.9% |
+---
 
-### 4.3 20-Year Monthly SIP Lifecycle Glide Path
-Starting at Rs 25,000/month with a 10% annual step-up (`sip_lifecycle` sheet):
-* **Years 1–7 (Age 26–32, Early Career):** Aggressive allocation (100% equity). Cumulative Invested = Rs 28.46 Lakhs $\rightarrow$ Expected Wealth = Rs 47.02 Lakhs.
-* **Years 8–15 (Age 33–40, Mid Career):** Balanced allocation (65% equity / 35% T-Bills). Cumulative Invested = Rs 73.44 Lakhs $\rightarrow$ Expected Wealth = Rs 1.34 Crores.
-* **Years 16–20 (Age 41–45, Capital Preservation):** Defensive allocation (35% equity / 65% T-Bills). Total Invested = Rs 1.05 Crores $\rightarrow$ **Projected Terminal Wealth = Rs 2.18 Crores**.
+## Do these stocks actually diversify each other?
+We used 60 months of return data (Oct 2021 to Oct 2026) and built a correlation matrix.
 
-### 4.4 Five-Year Historical Backtest & Core Performance Metrics (`returns` sheet, Oct 2021 – Oct 2026)
-| Metric | Trent Ltd. | Asian Paints | TCS Ltd. | Equal-Weight (3 Stocks) | Tangency Portfolio (5Y Hist.) | Nifty 50 Benchmark |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Annualized Return** | 31.92% | -1.64% | 0.83% | **10.37%** | 3.06% | 6.22% |
-| **Annualized Volatility** | 43.14% | 25.71% | 28.45% | **24.39%** | 21.21% | 13.43% |
-| **Beta vs. Nifty 50 ($\beta$)** | 1.83 | 1.14 | 1.15 | **1.38** | 1.22 | 1.00 |
-| **Sharpe Ratio ($R_f=7.473\%$)** | **+0.57** | -0.35 | -0.23 | **+0.12** | -0.21 | -0.09 |
-| **Treynor's Ratio** | **+13.33%** | -7.96% | -5.76% | **+2.10%** | -3.60% | -1.25% |
-| **Jensen's Alpha ($\alpha$)** | **+26.75%** | -7.68% | -5.20% | **+4.63%** | -2.88% | 0.00% |
-| **Tracking Error vs. Nifty** | 37.14% | 20.70% | 23.96% | **16.69%** | 13.74% | 0.00% |
-| **Information Ratio** | **+0.69** | -0.38 | -0.22 | **+0.25** | -0.23 | 0.00 |
+| Asset / Index | TRENT | ASIANPAINT | TCS | NIFTY 50 |
+|---|---|---|---|---|
+| **TRENT** | 1.000 | 0.403 | 0.350 | 0.571 |
+| **ASIANPAINT** | 0.403 | 1.000 | 0.185 | 0.598 |
+| **TCS** | 0.350 | 0.185 | 1.000 | 0.544 |
+| **NIFTY 50** | 0.571 | 0.598 | 0.544 | 1.000 |
 
-*The Equal-Weight 3-Stock Portfolio delivered +4.63% annual Jensen's Alpha, +2.10% Treynor's Ratio, +0.12 Sharpe Ratio, and +0.25 Information Ratio over Nifty 50, proving the benefit of combining non-correlated sector leaders.*
+Asian Paints and TCS are barely correlated (0.185), and Trent and TCS sit at 0.350. Putting them together brings down the overall risk of the portfolio.
 
-### 4.5 Final Investment Verdicts & Limitations
-* **Trent Ltd. — AVOID / PROFIT BOOKING:** CMP (Rs 3,036) stands >1,200% above DCF intrinsic value (Rs 229.58) and 97% above peer multiples. AI sentiment confirms hyper-optimism running ahead of physical store unit economics.
-* **Asian Paints Ltd. — ACCUMULATE ON DIPS:** Significant de-rating post Birla Opus has discounted excessive disruption fear; trades below its own 5Y historical multiple implied value (Rs 2,679.70) with 1.11x CFO/PAT conversion.
-* **Tata Consultancy Services — ACCUMULATE / CORE HOLD:** Trading at exact parity with IT peer multiples (Rs 2,467.90 peer-implied vs Rs 2,499 CMP) and a 35.4% discount to its own 5Y history (Rs 3,869.93), with negative AI disruption sentiment masking 1.01x cash conversion.
-* **Limitations:** Past 5-year returns do not guarantee future performance. DCF valuation is sensitive to WACC and terminal growth inputs. Sentiment models trained on corporate transcripts may exhibit management optimism bias.
+---
+
+## How the business performed over 5 years (FY22 to FY26)
+- **Trent:** Revenue went from ₹4,498.02 Cr to ₹20,074.21 Cr, a 45.3% CAGR. EBITDA margin improved from 13.2% to 18.7% as private labels scaled up. Cumulative 5-year CFO/PAT is a healthy 1.19x.
+- **Asian Paints:** Revenue grew from ₹29,101.28 Cr to ₹35,583.54 Cr, only a 5.2% CAGR. EBITDA margin bounced between 16.5% and 21.2% because of raw material costs and the discounting needed to fight Birla Opus. CFO/PAT is 1.11x.
+- **TCS:** Revenue grew from ₹1,91,754 Cr to ₹2,67,021 Cr, an 8.6% CAGR, with EBITDA margin staying around 26.5% to 27.7% (₹72,398 Cr in FY26). The 5-year CFO/PAT is 1.01x, so cash flow has stayed strong.
+
+---
+
+## DCF valuation
+We used standard Indian benchmark inputs, a risk-free rate of 7.473% (10Y G-Sec), an equity risk premium of 7.08%, a tax rate of 25.17%, Blume-adjusted betas and a fairly conservative terminal growth rate of 5.00%.
+
+| Valuation Parameter | Trent (10Y Stage 1) | Asian Paints (5Y Stage 1) | TCS (5Y Stage 1) |
+|---|---|---|---|
+| **Blume beta** | 1.5592 | 1.0966 | 1.1026 |
+| **Cost of equity** | 18.51% | 15.24% | 15.28% |
+| **After-tax cost of debt** | 7.26% | 4.70% | 8.88% |
+| **WACC** | 18.34% | 15.06% | 15.20% |
+| **Stage 1 PV of cash flows** | ₹6,176.54 Cr | ₹12,710.27 Cr | ₹1,71,732.69 Cr |
+| **Stage 2 PV (terminal value)** | ₹6,958.10 Cr | ₹25,200.01 Cr | ₹3,25,281.01 Cr |
+| **Enterprise value** | ₹13,134.63 Cr | ₹37,910.29 Cr | ₹4,97,013.70 Cr |
+| **Less: borrowings and leases** | ₹(2,561.25) Cr | ₹(3,928.93) Cr | ₹(11,283.00) Cr |
+| **Plus: cash and investments** | ₹1,667.91 Cr | ₹8,135.42 Cr | ₹46,896.00 Cr |
+| **Implied equity value** | ₹12,241.29 Cr | ₹42,116.78 Cr | ₹5,32,626.70 Cr |
+| **Diluted shares** | 53.32 Cr | 95.92 Cr | 361.81 Cr |
+| **DCF value per share** | ₹229.58 | ₹439.08 | ₹1,472.12 |
+| **Current market price** | ₹3,036.00 | ₹2,438.00 | ₹2,499.00 |
+| **Verdict** | Overvalued (-92.4%) | Overvalued (-82.0%) | Overvalued (-41.1%) |
+
+---
+
+## What the sensitivity tests showed
+- **Trent:** At a WACC of 18.34% and Terminal growth of 5.0%, fair value comes out at ₹229.58. To justify ₹3,036, Trent would need to keep growing 30% or more every year for well over a decade.
+- **Asian Paints:** Base value is ₹439.08, and it ranges from ₹380.89 to ₹525.64 across the scenarios we tested.
+- **TCS:** Base value is ₹1,472.12, ranging from ₹1,274.18 to ₹1,764.73.
+
+---
+
+## Relative valuation and earnings quality
+Here we used a 50/50 blend of P/E and EV/EBITDA, once with peer multiples and once with each company's own history.
+- **Trent:** Peers (average 40.6x P/E) point to ₹1,540.75. Its own 5-year history (average 109.9x P/E) points to ₹4,132.13.
+- **Asian Paints:** Peers (31.1x P/E) point to ₹1,375.48. Its own history (median 61.2x P/E) points to ₹2,679.70.
+- **TCS:** Peers (industry average 18.3x P/E) point to ₹2,467.90, and its own history points to ₹3,869.93. TCS trades almost exactly in line with its sector.
+
+### Are the profits real?
+All three companies had CFO/PAT above 1.0 in every one of the 5 years (Trent 1.19x, Asian Paints 1.11x, TCS 1.01x). So the reported profits are backed by real cash.
+
+A few adjustments and notes on the data:
+- Trent's ₹2,561 Cr of debt is mostly store leases under Ind AS 116, not bank loans.
+- We adjusted for Trent's 3:2 stock split in early 2026 so the price history stays clean.
+- Asian Paints has ₹2,290 Cr of contingent liabilities and is facing a CCI inquiry.
+- TCS has no financial debt.
+
+---
+
+## AI sentiment and media framing
+We ran 24 earnings call transcripts (FY25 Q1 to FY26 Q4) through two models: ProsusAI FinBERT and a local Llama 3.1 8B.
+
+### What the sentiment showed
+- **Trent:** Management stayed very upbeat (+0.70), but analyst questions dropped to +0.44 as people started worrying about slowing same-store sales.
+- **Asian Paints:** Analyst Q&A sentiment fell hard, from +0.28 to -0.32, as price cuts and dealer discounts started hurting profits.
+- **TCS:** Prepared remarks stayed positive (+0.38), but analysts were more cautious (+0.10) because of GenAI worries.
+
+### Which model was better?
+We checked both models against human scoring on 90 sentences.
+
+| Model | Accuracy | Macro-F1 | Cohen's kappa | What we saw |
+|---|---|---|---|---|
+| **FinBERT** | 82.2% | 0.814 | 0.732 | Good overall, but misread some Indian management phrasing |
+| **Llama 3.1 8B** | 88.9% | 0.885 | 0.829 | Understood context better and caught subtle shifts in tone |
+
+For example, FinBERT scored "selective price calibration" as positive (+0.34). Llama 3.1 correctly read it as defensive price cuts (-0.42), which matched the human score.
+
+### How the media framed each company
+We looked at 150 news headlines:
+- **Trent (54% hype/FOMO):** Coverage was mostly about aggressive store additions and stock momentum, which feeds into the 94.1x P/E.
+- **Asian Paints (58% extrapolation bias):** Headlines focused on short-term price competition and assumed it would permanently damage the company's distribution strength.
+- **TCS (52% fear framing):** Media focused on GenAI replacing IT services and mostly ignored the strong cash generation and contract wins.
+
+---
+
+## Building the portfolio
+We used forward-looking CAPM returns (Trent 18.51%, Asian Paints 15.24%, TCS 15.28%) with a 70% cap on any single stock. Mean-variance optimization gave us the tangency portfolio:
+- **Trent:** 11.1%. Kept low because of its 43.14% volatility.
+- **Asian Paints:** 49.5%. Gets a high weight because it has low correlation with TCS.
+- **TCS:** 39.4%. Gets a high weight because of its stable cash flows and lower risk.
+
+The portfolio's expected return is 15.62%, volatility is 21.21% and Sharpe ratio is +0.42.
+
+### Allocation by risk profile
+| Profile | Risk score | Risk aversion (A) | Equity | Cash/T-bills | Final split |
+|---|---|---|---|---|---|
+| **Aggressive** | 32 to 40 | 2.2 | 89.1% | 10.9% | Trent 9.9%, Asian Paints 44.1%, TCS 35.1%, T-bills 10.9% |
+| **Balanced** | 22 to 31 | 4.9 | 40.0% | 60.0% | Trent 4.4%, Asian Paints 19.8%, TCS 15.7%, T-bills 60.0% |
+| **Defensive** | 10 to 21 | 8.5 | 23.1% | 76.9% | Trent 2.6%, Asian Paints 11.4%, TCS 9.1%, T-bills 76.9% |
+
+---
+
+## 20-year lifecycle glide path
+This assumes a starting SIP of ₹25,000 a month with a 10% step-up each year.
+- **Years 1 to 7 (age 26 to 32):** 100% equity (aggressive). About ₹28.46 L invested, expected value ₹47.02 L.
+- **Years 8 to 15 (age 33 to 40):** 65% equity and 35% debt (balanced). Total invested ₹73.44 L, expected value ₹1.34 Cr.
+- **Years 16 to 20 (age 41 to 45):** 35% equity and 65% debt (defensive). Total invested ₹1.05 Cr, projected target ₹2.18 Cr.
+
+---
+
+## 5-year backtest (Oct 2021 to Oct 2026)
+| Metric | Trent | Asian Paints | TCS | Equal-weight (3 stocks) | Nifty 50 |
+|---|---|---|---|---|---|
+| **Annualized return** | 31.92% | -1.64% | 0.83% | 10.37% | 6.22% |
+| **Annualized volatility** | 43.14% | 25.71% | 28.45% | 24.39% | 13.43% |
+| **Beta vs Nifty** | 1.83 | 1.14 | 1.15 | 1.38 | 1.00 |
+| **Sharpe ratio** | +0.57 | -0.35 | -0.23 | +0.12 | -0.09 |
+| **Jensen's alpha** | +26.75% | -7.68% | -5.20% | +4.63% | 0.00% |
+| **Information ratio** | +0.69 | -0.38 | -0.22 | +0.25 | 0.00 |
+
+The simple equal-weight mix gave an alpha of +4.63% a year and an information ratio of +0.25 over the Nifty 50. Holding sector leaders that don't move together helps cover the downside of each stock.
+
+---
+
+## Final verdict (portfolio)
+**Verdict: ACCUMULATE IN STAGES.** We back the three stocks as one diversified portfolio, weighted Asian Paints 49.5%, TCS 39.4% and Trent 11.1%, with the equity share set by the investor’s risk profile.
+
+### Why we back the portfolio
+1. **Diversification works:** Correlations between the stocks are only 0.185 to 0.403, so the optimised portfolio’s volatility (21.21%) is lower than every single stock (25.71% to 43.14%).
+2. **Better return for the risk taken:** Expected return is 15.62% with a Sharpe ratio of +0.42. In the 5-year backtest even the simple equal-weight mix beat the Nifty 50: 10.37% vs 6.22% a year, alpha +4.63%, information ratio +0.25 and Sharpe +0.12 vs -0.09.
+3. **Risk is controlled by position size:** Trent is the only stock priced for perfection (94.1x P/E, DCF value ₹229.58 vs price ₹3,036), so the model caps it at 11.1%. It still adds some of the growth (31.92% backtest return) without letting its 43.14% volatility drive the portfolio.
+4. **About 89% sits in cash-backed businesses:** Asian Paints and TCS together make up 88.9%. All three stocks had CFO/PAT above 1.0x in every one of the 5 years, and TCS has no financial debt.
+5. **Sentiment gives an entry point:** Analyst and media tone on the two core holdings looks harsher than their cash flows justify (Asian Paints analyst Q&A at -0.32, 58% extrapolation bias; TCS 52% fear framing). Trent’s coverage is 54% hype, which is another reason to keep it small.
+
+### How to act on it
+- **Match equity to risk profile:** Aggressive (score 32 to 40): 89.1% equity and 10.9% T-bills. Balanced (22 to 31): 40.0% and 60.0%. Defensive (10 to 21): 23.1% and 76.9%. Inside the equity part, keep the same 11.1 / 49.5 / 39.4 mix.
+- **Build through a monthly SIP, not a lump sum:** Start at ₹25,000 a month with a 10% yearly step-up, and follow the glide path from 100% equity to 65% and then 35% over 20 years.
+- **Rebalance once a year:** Trim Trent if it drifts well above its 11.1% target, and top up Asian Paints and TCS on dips.
+
+### What could go wrong
+- **Valuation:** The DCF puts all three stocks above intrinsic value (-92.4%, -82.0% and -41.1%). This is why we stage the entry. The verdict rests mainly on relative valuation, diversification and cash quality.
+- **Market risk:** The equal-weight mix has a beta of 1.38, so it will fall harder than the Nifty 50 in a broad sell-off.
+- **Limited evidence:** Only three stocks in three sectors, and the backtest covers one 5-year window and tested the equal-weight mix, not the optimised weights.
+- **Stock-specific risks:** Birla Opus price war and the CCI inquiry (Asian Paints), GenAI disruption (TCS) and slowing same-store sales (Trent).
